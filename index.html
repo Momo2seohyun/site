@@ -28,8 +28,38 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
   </head>
-  <body>
 
+
+</header>
+<!-- Header Area wrapper End -->
+<!-- Messenger ปลั๊กอินแชท Code -->
+  <div id="fb-root"></div>
+  <!-- Your ปลั๊กอินแชท code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "102792525293387");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v12.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <body>
     <!-- Header Area wrapper Starts -->
     <header id="header-wrap">
       <!-- Navbar Start -->
@@ -87,37 +117,6 @@
         </div> 
       </div>
       <!-- Hero Area End -->
-
-    </header>
-    <!-- Header Area wrapper End -->
-
-    <!-- Messenger ปลั๊กอินแชท Code -->
-      <div id="fb-root"></div>
-
-      <!-- Your ปลั๊กอินแชท code -->
-      <div id="fb-customer-chat" class="fb-customerchat">
-      </div>
-
-      <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "102792525293387");
-        chatbox.setAttribute("attribution", "biz_inbox");
-
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v12.0'
-          });
-        };
-
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
 
     <!-- Features Section Start -->
     <section id="features" class="section-padding">
